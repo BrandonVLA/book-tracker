@@ -5,6 +5,7 @@ import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { useAuth } from "./context/AuthContext";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 // Placeholder pages until we build the real views
 function LoginPage() {
@@ -56,7 +57,7 @@ function App() {
           path="/"
           element={
             <ProtectedRoute>
-              <LibraryPage />
+              <Dashboard />
             </ProtectedRoute>
           }
         />
